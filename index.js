@@ -24,6 +24,10 @@ admin.initializeApp({
 
 const port = 5000;
 
+app.get('/', (req, res) => {
+  res.send('DB Working')
+})
+
 client.connect((err) => {
   const bookingCollection = client.db("burjAlArab").collection("bookings");
   app.post("/addBooking", (req, res) => {
